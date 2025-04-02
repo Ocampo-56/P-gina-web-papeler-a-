@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería López</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url("https://image.freepik.com/foto-gratis/papeleria-colores-fondo_23-2147847765.jpg");
+        }
+        h1 {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            font-size: 2em;
+            margin: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .seccion {
+            padding: 40px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .producto {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .precio {
+            color: green;
+            font-weight: bold;
+        }
+        /* Ocultar las secciones por defecto */
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Papelería López</h1>
+
+<!-- Barra de navegación -->
+<div class="navbar">
+    <a href="javascript:void(0);" onclick="mostrarSeccion('inicio')">INICIO</a>
+    <a href="javascript:void(0);" onclick="mostrarSeccion('productos')">PRODUCTOS</a>
+</div>
+
+<!-- Sección de Inicio -->
+<div id="inicio" class="seccion">
+    <h2>Bienvenidos a Papelería López</h2>
+    <p>Nuestra papelería ofrece una amplia variedad de productos de alta calidad, incluyendo:</p>
+    <ul>
+        <li>Cuadernos y libretas</li>
+        <li>Materiales de arte y manualidades</li>
+        <li>Suministros de oficina (bolígrafos, lápices, etc.)</li>
+    </ul>
+    <p>Nuestro equipo de expertos está listo para ayudarle a encontrar lo que necesita y ofrecerle asesoramiento personalizado. ¡Visítanos!</p>
+</div>
+
+<!-- Sección de Productos -->
+<div id="productos" class="seccion oculto">
+    <h2>Productos Disponibles</h2>
+    <div class="productos">
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_724854-MLU77454419529_072024-O.webp" alt="Cuaderno rayado">
+            <h2>Cuaderno Rayado</h2>
+            <p>80 hojas, tapa dura</p>
+            <p class="precio">$50.00</p>
+        </div>
+        <div class="producto">
+            <img src="https://www.elpalaciodehierro.com/dw/image/v2/BDKB_PRD/on/demandware.static/-/Sites-palacio-master-catalog/default/dw4bd47200/images/40972656/large/40972656_x1.jpg?sw=686&sh=785" alt="Lápices de colores">
+            <h2>Lápices de Colores</h2>
+            <p>12 colores vibrantes</p>
+            <p class="precio">$75.00</p>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_886842-MLM47784013642_102021-F.jpg" alt="Marcadores permanentes">
+            <h2>Marcadores Permanentes</h2>
+            <p>Set de 4 colores</p>
+            <p class="precio">$75.00</p>
+        </div>
+        <div class="producto">
+            <img src="https://m.media-amazon.com/images/I/51+gH-geq0L._AC_SL1200_.jpg" alt="Marca Texto">
+            <h2>Marca Texto</h2>
+            <p>Set de 6 colores fluorescentes</p>
+            <p class="precio">$90.00</p>
+        </div>
+        <div class="producto">
+            <img src="https://117mx.com.mx/wp-content/uploads/2022/05/LapizAdhDixon36g_01.png" alt="Pegamento en barra">
+            <h2>Pegamento en Barra</h2>
+            <p>Ideal para papel y cartón</p>
+            <p class="precio">$20.00</p>
+        </div>
+        <div class="producto">
+            <img src="https://cdn.shopify.com/s/files/1/0372/4450/2149/products/unnamed_1_427cace2-4c43-4f95-99ad-85866d13d1f1_488x512.png?v=1591824479" alt="Tijeras escolares">
+            <h2>Tijeras Escolares</h2>
+            <p>Seguras para niños, punta redonda</p>
+            <p class="precio">$35.00</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript para mostrar/ocultar secciones -->
+<script>
+    function mostrarSeccion(seccion) {
+        // Ocultamos todas las secciones
+        document.getElementById("inicio").classList.add("oculto");
+        document.getElementById("productos").classList.add("oculto");
+
+        // Mostramos la sección seleccionada
+        document.getElementById(seccion).classList.remove("oculto");
+    }
+
+    // Mostrar la sección de inicio por defecto
+    mostrarSeccion('inicio');
+</script>
+
+</body>
+</html>
